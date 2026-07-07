@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+DOTS="$HOME/Projects/kurodots"
+
+echo "Starting KuroMiro preview..."
+
+pkill -9 waybar 2>/dev/null
+pkill -9 swaync 2>/dev/null
+pkill -9 swaync-client 2>/dev/null
+
+sleep 0.5
+
+waybar \
+  -c "$DOTS/.config/waybar/config.jsonc" \
+  -s "$DOTS/.config/waybar/style.css" \
+  >/tmp/kuro-waybar.log 2>&1 &
+
+swaync \
+  -c "$DOTS/.config/swaync/config.json" \
+  -s "$DOTS/.config/swaync/style.css" \
+  >/tmp/kuro-swaync.log 2>&1 &
+
+notify-send "KuroMiro" "Preview started"
+
+echo "Preview started."
+echo "Logs:"
+echo "  /tmp/kuro-waybar.log"
+echo "  /tmp/kuro-swaync.log"

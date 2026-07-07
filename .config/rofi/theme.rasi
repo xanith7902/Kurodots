@@ -1,0 +1,133 @@
+* {
+  bg:        #181825cc;
+  bg-solid:  #181825;
+  bg-alt:    #1e1e2ecc;
+
+  fg:        #cdd6f4;
+  muted:     #6c7086;
+
+  purple:    #cba6f7;
+  pink:      #f5c2e7;
+  blue:      #89b4fa;
+  green:     #a6e3a1;
+  red:       #f38ba8;
+  yellow:    #f9e2af;
+
+  border:    #cba6f744;
+
+  transparent: #00000000;
+
+  font: "JetBrainsMono Nerd Font 11";
+}
+
+window {
+  width: 720px;
+  border: 1px;
+  border-color: @border;
+  border-radius: 26px;
+  background-color: @bg;
+  padding: 18px;
+}
+
+mainbox {
+  background-color: @transparent;
+  spacing: 14px;
+  children: [ inputbar, listview ];
+}
+
+inputbar {
+  background-color: @bg-alt;
+  border: 1px;
+  border-color: #cba6f722;
+  border-radius: 18px;
+  padding: 14px 16px;
+  spacing: 12px;
+  children: [ prompt, entry ];
+}
+
+prompt {
+  text-color: @purple;
+  font: "JetBrainsMono Nerd Font Bold 12";
+}
+
+entry {
+  placeholder: "Search apps...";
+  placeholder-color: @muted;
+  text-color: @fg;
+  background-color: @transparent;
+  cursor-color: @pink;
+}
+
+listview {
+  background-color: @transparent;
+  lines: 8;
+  columns: 1;
+  spacing: 8px;
+  fixed-height: false;
+  scrollbar: false;
+}
+
+element {
+  background-color: @transparent;
+  border-radius: 16px;
+  padding: 10px 12px;
+  spacing: 12px;
+}
+
+element normal.normal {
+  background-color: @transparent;
+  text-color: @fg;
+}
+
+element alternate.normal {
+  background-color: @transparent;
+  text-color: @fg;
+}
+
+element selected.normal {
+  background-color: #cba6f722;
+  border: 1px;
+  border-color: #cba6f755;
+  text-color: @fg;
+}
+
+element-icon {
+  size: 32px;
+  background-color: @transparent;
+}
+
+element-text {
+  background-color: @transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+mode-switcher {
+  background-color: @transparent;
+  spacing: 8px;
+}
+
+button {
+  background-color: @bg-alt;
+  text-color: @muted;
+  border-radius: 14px;
+  padding: 8px 12px;
+}
+
+button selected {
+  background-color: #cba6f722;
+  text-color: @purple;
+}
+
+message {
+  background-color: @bg-alt;
+  border: 1px;
+  border-color: #f38ba844;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+textbox {
+  background-color: @transparent;
+  text-color: @fg;
+}

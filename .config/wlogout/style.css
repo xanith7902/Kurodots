@@ -1,0 +1,54 @@
+* {
+  font-family: "JetBrains Mono", "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+window {
+  background: rgba(17, 17, 27, 0.55);
+}
+
+button {
+  background-color: rgba(24, 24, 37, 0.82);
+  color: #cdd6f4;
+
+  border: 1px solid rgba(203, 166, 247, 0.35);
+  border-radius: 24px;
+
+  margin: 12px;
+  padding: 30px;
+
+  background-repeat: no-repeat;
+  background-position: center 34%;
+  background-size: 64px;
+
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.35);
+}
+
+button:hover {
+  background-color: rgba(203, 166, 247, 0.22);
+  border: 1px solid rgba(245, 194, 231, 0.7);
+  color: #f5c2e7;
+}
+
+button:focus {
+  background-color: rgba(203, 166, 247, 0.28);
+  border: 1px solid rgba(245, 194, 231, 0.8);
+  color: #f5c2e7;
+}
+
+#lock {
+  color: #89b4fa;
+}
+
+#logout {
+  color: #f5c2e7;
+}
+
+#reboot {
+  color: #f9e2af;
+}
+
+#shutdown {
+  color: #f38ba8;
+}

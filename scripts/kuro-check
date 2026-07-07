@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+
+DOTS="$HOME/Projects/kurodots"
+
+echo "󰣇 KuroMiro check"
+echo "----------------"
+
+check_cmd() {
+  if command -v "$1" >/dev/null 2>&1; then
+    echo "✅ $1"
+  else
+    echo "❌ $1 missing"
+  fi
+}
+
+check_file() {
+  if [ -f "$1" ]; then
+    echo "✅ $1"
+  else
+    echo "❌ Missing: $1"
+  fi
+}
+
+echo
+echo "Commands:"
+check_cmd hyprland
+check_cmd waybar
+check_cmd rofi
+check_cmd kitty
+check_cmd swaync
+check_cmd hyprlock
+check_cmd grim
+check_cmd slurp
+check_cmd swappy
+check_cmd wl-copy
+check_cmd cliphist
+check_cmd pamixer
+check_cmd brightnessctl
+check_cmd playerctl
+check_cmd notify-send
+
+echo
+echo "Optional wallpaper tools:"
+if command -v swww >/dev/null 2>&1; then
+  echo "⚠️  swww found, but swww-daemon may be missing. Wallpaper changing disabled for now."
+elif command -v awww >/dev/null 2>&1; then
+  echo "⚠️  awww found. Wallpaper changing can be added later."
+else
+  echo "⚠️  No wallpaper tool found. Wallpaper changing disabled for now."
+fi
+
+echo
+echo "Config files:"
+check_file "$DOTS/.config/waybar/config.jsonc"
+check_file "$DOTS/.config/waybar/style.css"
+check_file "$DOTS/.config/rofi/config.rasi"
+check_file "$DOTS/.config/rofi/theme.rasi"
+check_file "$DOTS/.config/kitty/kitty.conf"
+check_file "$DOTS/.config/swaync/config.json"
+check_file "$DOTS/.config/swaync/style.css"
+check_file "$DOTS/.config/hypr/hyprland.conf"
+check_file "$DOTS/.config/hypr/hyprlock.conf"
+
+echo
+echo "Done."

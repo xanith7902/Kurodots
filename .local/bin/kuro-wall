@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+WALL_DIR="$HOME/Projects/kurodots/wallpapers"
+
+mkdir -p "$WALL_DIR"
+
+WALL=$(find "$WALL_DIR" -type f \( \
+  -iname "*.png" -o \
+  -iname "*.jpg" -o \
+  -iname "*.jpeg" -o \
+  -iname "*.webp" \
+\) | shuf -n 1)
+
+if [ -z "$WALL" ]; then
+  notify-send "KuroMiro" "No wallpapers found in $WALL_DIR"
+  exit 1
+fi
+
+if command -v swww >/dev/null 2>&1 && command -v swww-daemon >/dev/null 2>&1; then
+  if ! pgrep -x "swww-daemon" >/dev/null; then
+    swww-daemon &
+    sleep 0.5
+  fi
+
+  swww img "$WALL" \
+    --transition-type grow \
+    --transition-pos center \
+    --transition-duration 1 \
+    --transition-fps 60
+
+elif command -v awww >/dev/null 2>&1 && command -v awww-daemon >/dev/null 2>&1; then
+  if ! pgrep -x "awww-daemon" >/dev/null; then
+    awww-daemon &
+    sleep 0.5
+  fi
+
+  awww img "$WALL"
+
+else
+  notify-send "KuroMiro" "No wallpaper tool found. Install swww or awww."
+  echo "No wallpaper tool found. Install swww or awww."
+  exit 1
+fi
+
+notify-send "KuroMiro" "Wallpaper changed: $(basename "$WALL")"

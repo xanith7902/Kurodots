@@ -1,0 +1,97 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 40,
+  "spacing": 8,
+  "margin-top": 10,
+  "margin-left": 14,
+  "margin-right": 14,
+
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "tray",
+    "network",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "custom/power"
+  ],
+
+  "custom/launcher": {
+    "format": "Apps",
+    "tooltip": "Open launcher",
+    "on-click": "rofi -show drun -config ~/Projects/kurodots/.config/rofi/config.rasi"
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}",
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 45,
+    "separate-outputs": true
+  },
+
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:%A, %d %B}",
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "network": {
+    "format-wifi": "WiFi  {essid}",
+    "format-ethernet": "Wired",
+    "format-disconnected": "Offline",
+    "tooltip-format": "{ifname}\n{ipaddr}/{cidr}",
+    "on-click": "kitty --config ~/Projects/kurodots/.config/kitty/kitty.conf nmtui"
+  },
+
+  "pulseaudio": {
+    "format": "Vol  {volume}%",
+    "format-muted": "Muted",
+    "scroll-step": 5,
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol"
+  },
+
+  "backlight": {
+    "format": "Bri  {percent}%"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "Bat  {capacity}%",
+    "format-charging": "Chg  {capacity}%",
+    "format-plugged": "Plug  {capacity}%",
+    "format-alt": "{time}"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10
+  },
+
+  "custom/power": {
+    "format": "Power",
+    "tooltip": "Power menu",
+    "on-click": "wlogout --layout ~/Projects/kurodots/.config/wlogout/layout --css ~/Projects/kurodots/.config/wlogout/style.css"
+  }
+}

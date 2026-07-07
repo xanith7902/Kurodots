@@ -1,0 +1,189 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.blank-window {
+  background: transparent;
+}
+
+.control-center {
+  background: rgba(24, 24, 37, 0.78);
+  border: 1px solid rgba(203, 166, 247, 0.35);
+  border-radius: 24px;
+  padding: 14px;
+  color: #cdd6f4;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.control-center-list-placeholder {
+  color: #6c7086;
+}
+
+.notification {
+  background: transparent;
+  border-radius: 20px;
+  margin: 8px;
+}
+
+.notification-row {
+  outline: none;
+  background: transparent;
+}
+
+.notification-row:focus,
+.notification-row:hover {
+  background: rgba(203, 166, 247, 0.08);
+  border-radius: 20px;
+}
+
+.notification-background {
+  background: rgba(24, 24, 37, 0.86);
+  border: 1px solid rgba(203, 166, 247, 0.28);
+  border-radius: 20px;
+  margin: 8px 4px;
+  color: #cdd6f4;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.28);
+}
+
+.notification-content {
+  background: transparent;
+  padding: 12px;
+  border-radius: 20px;
+}
+
+.notification-default-action,
+.notification-action {
+  background: transparent;
+  color: #cdd6f4;
+  border-radius: 14px;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+  background: rgba(203, 166, 247, 0.16);
+}
+
+.summary {
+  color: #f5c2e7;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.time {
+  color: #6c7086;
+  font-size: 11px;
+}
+
+.body {
+  color: #bac2de;
+  font-size: 12px;
+}
+
+.close-button {
+  background: rgba(243, 139, 168, 0.2);
+  color: #f38ba8;
+  border-radius: 999px;
+  min-width: 22px;
+  min-height: 22px;
+}
+
+.close-button:hover {
+  background: rgba(243, 139, 168, 0.35);
+}
+
+.notification.critical .notification-background {
+  border: 1px solid rgba(243, 139, 168, 0.65);
+}
+
+.notification.critical .summary {
+  color: #f38ba8;
+}
+
+.widget-title {
+  background: transparent;
+  color: #cdd6f4;
+  padding: 8px 10px;
+  margin: 4px;
+}
+
+.widget-title > label {
+  color: #f5c2e7;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.widget-title > button {
+  background: rgba(203, 166, 247, 0.16);
+  color: #cba6f7;
+  border-radius: 14px;
+  padding: 7px 12px;
+}
+
+.widget-title > button:hover {
+  background: rgba(203, 166, 247, 0.28);
+}
+
+.widget-dnd {
+  background: rgba(30, 30, 46, 0.72);
+  border: 1px solid rgba(203, 166, 247, 0.22);
+  border-radius: 18px;
+  padding: 12px;
+  margin: 8px 4px;
+  color: #cdd6f4;
+}
+
+.widget-dnd > switch {
+  background: rgba(108, 112, 134, 0.45);
+  border-radius: 999px;
+}
+
+.widget-dnd > switch:checked {
+  background: rgba(203, 166, 247, 0.8);
+}
+
+.widget-mpris {
+  background: rgba(30, 30, 46, 0.72);
+  border: 1px solid rgba(203, 166, 247, 0.22);
+  border-radius: 20px;
+  padding: 12px;
+  margin: 8px 4px;
+  color: #cdd6f4;
+}
+
+.widget-mpris-title {
+  color: #f5c2e7;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.widget-mpris-subtitle {
+  color: #bac2de;
+  font-size: 12px;
+}
+
+.widget-buttons-grid {
+  background: rgba(30, 30, 46, 0.72);
+  border: 1px solid rgba(203, 166, 247, 0.22);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 8px 4px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: rgba(203, 166, 247, 0.14);
+  color: #cba6f7;
+  border-radius: 16px;
+  min-height: 42px;
+  margin: 4px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: rgba(245, 194, 231, 0.22);
+  color: #f5c2e7;
+}

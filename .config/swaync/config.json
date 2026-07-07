@@ -1,0 +1,79 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+
+  "positionX": "right",
+  "positionY": "top",
+  "layer": "overlay",
+
+  "control-center-width": 410,
+  "control-center-height": 640,
+  "control-center-margin-top": 12,
+  "control-center-margin-bottom": 12,
+  "control-center-margin-right": 14,
+  "control-center-margin-left": 14,
+
+  "notification-window-width": 390,
+  "notification-icon-size": 48,
+  "notification-body-image-height": 160,
+  "notification-body-image-width": 260,
+
+  "timeout": 6,
+  "timeout-low": 3,
+  "timeout-critical": 0,
+
+  "fit-to-screen": true,
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 180,
+
+  "hide-on-clear": false,
+  "hide-on-action": true,
+
+  "script-fail-notify": true,
+
+  "widgets": [
+    "title",
+    "dnd",
+    "notifications",
+    "mpris",
+    "buttons-grid"
+  ],
+
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear"
+    },
+
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+
+    "mpris": {
+      "image-size": 86,
+      "image-radius": 18
+    },
+
+    "buttons-grid": {
+      "actions": [
+        {
+          "label": "Power",
+          "command": "systemctl poweroff"
+        },
+        {
+          "label": "Reboot",
+          "command": "systemctl reboot"
+        },
+        {
+          "label": "Lock",
+          "command": "hyprlock --config /home/kasonf/Projects/kurodots/.config/hypr/hyprlock.conf"
+        },
+        {
+          "label": "Logout",
+          "command": "hyprctl dispatch exit"
+        }
+      ]
+    }
+  }
+}
