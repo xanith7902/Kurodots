@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+python /home/kasonf/Projects/kurodots/apps/kuro-stream/main.py

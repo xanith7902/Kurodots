@@ -351,6 +351,7 @@ class KuroProfile(QWidget):
             ("Open Hyprland Rules", f"bash {DOTS}/scripts/kuro-open-hypr-rules"),
             ("Run Check", f"bash {DOTS}/scripts/kuro-check-terminal"),
             ("Open Folder", f"xdg-open {DOTS}"),
+            ("Stream Picker", f"bash {DOTS}/scripts/kuro-stream"),
             ("Open Rofi", f"rofi -show drun -config {DOTS}/.config/rofi/config.rasi"),
             ("Notifications", "swaync-client -t"),
             ("Edit Waybar CSS", f"kitty --config {DOTS}/.config/kitty/kitty.conf nano {DOTS}/.config/waybar/style.css"),
