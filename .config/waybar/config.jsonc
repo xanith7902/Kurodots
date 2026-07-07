@@ -57,8 +57,9 @@
 
   "clock": {
     "format": "{:%I:%M %p}",
-    "format-alt": "{:%A, %d %B}",
-    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    "tooltip-format": "<big>{:%B %Y}</big>
+<tt><small>{calendar}</small></tt>",
+    "on-click": "/home/kasonf/Projects/kurodots/scripts/kuro-center"
   },
 
   "custom/bt": {
@@ -87,6 +88,7 @@
     },
     "scroll-step": 5,
     "on-click": "pamixer -t",
+    "on-click": "/home/kasonf/Projects/kurodots/scripts/kuro-audio",
     "on-click-right": "pavucontrol"
   },
 
