@@ -197,24 +197,3 @@ layerrule = blur, rofi
 layerrule = ignorezero, rofi
 layerrule = blur, swaync-control-center
 layerrule = blur, swaync-notification-window
-
-# Kuro floating app rules
-windowrule = float, title:^(Kuro Profile)$
-windowrule = center, title:^(Kuro Profile)$
-windowrule = size 1100 720, title:^(Kuro Profile)$
-windowrule = noborder, title:^(Kuro Profile)$
-
-windowrule = float, title:^(Kuro Center)$
-windowrule = center, title:^(Kuro Center)$
-windowrule = size 1280 440, title:^(Kuro Center)$
-windowrule = noborder, title:^(Kuro Center)$
-
-windowrule = float, title:^(Kuro Audio)$
-windowrule = center, title:^(Kuro Audio)$
-windowrule = size 720 650, title:^(Kuro Audio)$
-windowrule = noborder, title:^(Kuro Audio)$
-
-windowrule = float, title:^(Kuro Stream)$
-windowrule = center, title:^(Kuro Stream)$
-windowrule = size 520 620, title:^(Kuro Stream)$
-windowrule = noborder, title:^(Kuro Stream)$
