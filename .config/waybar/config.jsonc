@@ -9,6 +9,7 @@
 
   "modules-left": [
     "custom/launcher",
+    "custom/profile",
     "hyprland/workspaces",
     "hyprland/window"
   ],
@@ -19,6 +20,7 @@
 
   "modules-right": [
     "tray",
+    "custom/bt",
     "network",
     "pulseaudio",
     "backlight",
@@ -29,7 +31,13 @@
   "custom/launcher": {
     "format": "Apps",
     "tooltip": "Open launcher",
-    "on-click": "rofi -show drun -config ~/Projects/kurodots/.config/rofi/config.rasi"
+    "on-click": "rofi -show drun -config /home/kasonf/Projects/kurodots/.config/rofi/config.rasi"
+  },
+
+  "custom/profile": {
+    "format": "Profile",
+    "tooltip": "Open Kuro Profile",
+    "on-click": "/home/kasonf/Projects/kurodots/scripts/kuro-profile"
   },
 
   "hyprland/workspaces": {
@@ -53,24 +61,38 @@
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
   },
 
+  "custom/bt": {
+    "format": "󰂯",
+    "tooltip": "Bluetooth",
+    "on-click": "blueman-manager"
+  },
+
   "network": {
-    "format-wifi": "WiFi  {essid}",
-    "format-ethernet": "Wired",
-    "format-disconnected": "Offline",
-    "tooltip-format": "{ifname}\n{ipaddr}/{cidr}",
-    "on-click": "kitty --config ~/Projects/kurodots/.config/kitty/kitty.conf nmtui"
+    "format-wifi": "󰖩",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
+    "tooltip-format-wifi": "{essid}\n{ipaddr}/{cidr}",
+    "tooltip-format-ethernet": "Wired\n{ipaddr}/{cidr}",
+    "tooltip-format-disconnected": "Offline",
+    "on-click": "kitty --config /home/kasonf/Projects/kurodots/.config/kitty/kitty.conf nmtui"
   },
 
   "pulseaudio": {
-    "format": "Vol  {volume}%",
-    "format-muted": "Muted",
+    "format": "{icon}",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "headphone": "󰋋",
+      "headset": "󰋎",
+      "default": ["", "", ""]
+    },
     "scroll-step": 5,
     "on-click": "pamixer -t",
     "on-click-right": "pavucontrol"
   },
 
   "backlight": {
-    "format": "Bri  {percent}%"
+    "format": "󰃠",
+    "tooltip-format": "Brightness {percent}%"
   },
 
   "battery": {
@@ -78,10 +100,11 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "Bat  {capacity}%",
-    "format-charging": "Chg  {capacity}%",
-    "format-plugged": "Plug  {capacity}%",
-    "format-alt": "{time}"
+    "format": "{icon}",
+    "format-charging": "󰂄",
+    "format-plugged": "󱟢",
+    "format-alt": "{capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
 
   "tray": {
@@ -90,8 +113,8 @@
   },
 
   "custom/power": {
-    "format": "Power",
+    "format": "⏻",
     "tooltip": "Power menu",
-    "on-click": "wlogout --layout ~/Projects/kurodots/.config/wlogout/layout --css ~/Projects/kurodots/.config/wlogout/style.css"
+    "on-click": "wlogout --layout /home/kasonf/Projects/kurodots/.config/wlogout/layout --css /home/kasonf/Projects/kurodots/.config/wlogout/style.css"
   }
 }

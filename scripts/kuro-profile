@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+python "$HOME/Projects/kurodots/apps/kuro-profile/main.py"

@@ -1,7 +1,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "JetBrains Mono", "Noto Sans", sans-serif;
+  font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono", "Noto Sans", sans-serif;
   font-size: 13px;
   font-weight: 700;
   min-height: 0;
@@ -24,10 +24,12 @@ tooltip label {
 }
 
 #custom-launcher,
+#custom-profile,
 #workspaces,
 #window,
 #clock,
 #tray,
+#custom-bt,
 #network,
 #pulseaudio,
 #backlight,
@@ -40,13 +42,26 @@ tooltip label {
   margin: 0 3px;
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.28);
 }
-
+/* Left side */
 #custom-launcher {
   color: #cba6f7;
   padding-left: 16px;
   padding-right: 16px;
 }
 
+#custom-profile {
+  color: #f5c2e7;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+#window {
+  color: #bac2de;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+/* Workspaces */
 #workspaces {
   padding: 4px 8px;
 }
@@ -61,8 +76,8 @@ tooltip label {
 }
 
 #workspaces button.active {
-  color: #cba6f7;
-  background: rgba(203, 166, 247, 0.18);
+  color: #181825;
+  background: #cba6f7;
 }
 
 #workspaces button:hover {
@@ -70,17 +85,32 @@ tooltip label {
   background: rgba(245, 194, 231, 0.14);
 }
 
-#window {
-  color: #bac2de;
-  padding-left: 14px;
-  padding-right: 14px;
-}
-
+/* Center */
 #clock {
   color: #f5c2e7;
   font-size: 14px;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+
+#bluetooth {
+  color: #89b4fa;
+}
+
+#bluetooth.disabled,
+#bluetooth.off {
+  color: #6c7086;
+}
+
+#bluetooth.connected {
+  color: #94e2d5;
+}
+
+/* Right side */
+#tray {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #network {
@@ -123,4 +153,64 @@ tooltip label {
   color: #f38ba8;
   padding-left: 16px;
   padding-right: 16px;
+}
+
+#custom-bt {
+  color: #89b4fa;
+  min-width: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+}
+
+/* Hover polish */
+#custom-launcher:hover,
+#custom-profile:hover,
+#network:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#battery:hover,
+#custom-power:hover,
+#clock:hover {
+  background: rgba(203, 166, 247, 0.16);
+  border: 1px solid rgba(245, 194, 231, 0.35);
+}
+ 
+
+
+
+#custom-bt,
+#network,
+#pulseaudio,
+#backlight,
+#battery,
+#custom-power {
+  min-width: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15px;
+}
+
+#custom-bt {
+  color: #89b4fa;
+}
+
+#network {
+  color: #89b4fa;
+}
+
+#pulseaudio {
+  color: #a6e3a1;
+}
+
+#backlight {
+  color: #f9e2af;
+}
+
+#battery {
+  color: #94e2d5;
+}
+
+#custom-power {
+  color: #f38ba8;
 }
