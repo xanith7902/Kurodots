@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+DOTS="$HOME/Projects/kurodots"
+kitty --config "$DOTS/.config/kitty/kitty.conf" nano "$DOTS/themes/waybar/full.css"

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -e
+DOTS="$HOME/Projects/kurodots"
+cat "$DOTS/themes/waybar/full.css" "$DOTS/themes/waybar/compact-overrides.css" > "$DOTS/.config/waybar/style.css"
+"$DOTS/scripts/kuro-preview"

@@ -1,0 +1,49 @@
+
+/* KuroMiro compact mode overrides */
+#window {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: 0;
+}
+
+#custom-launcher,
+#custom-profile,
+#workspaces,
+#clock,
+#tray,
+#custom-bt,
+#network,
+#pulseaudio,
+#backlight,
+#battery,
+#custom-power {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 0 2px;
+}
+
+#custom-launcher,
+#custom-profile,
+#custom-power {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+#custom-bt,
+#network,
+#pulseaudio,
+#backlight,
+#battery {
+  min-width: 30px;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-size: 15px;
+}
+
+#workspaces button {
+  padding: 3px 7px;
+}

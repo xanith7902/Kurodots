@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+DOTS="$HOME/Projects/kurodots"
+"$DOTS/scripts/kuro-preview"

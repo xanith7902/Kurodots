@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+DOTS="$HOME/Projects/kurodots"
+kitty --config "$DOTS/.config/kitty/kitty.conf" bash -lc "$DOTS/scripts/kuro-check; echo; read -p \"Press Enter to close...\""

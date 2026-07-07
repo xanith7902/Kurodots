@@ -344,45 +344,21 @@ class KuroProfile(QWidget):
         grid.setSpacing(12)
 
         buttons = [
-            ("Start Preview", f"bash {DOTS}/scripts/kuro-preview"),
-            ("Stop Preview", f"bash {DOTS}/scripts/kuro-stop"),
-            (
-                "Run Check",
-                f"kitty --config {DOTS}/.config/kitty/kitty.conf "
-                f"bash -lc '{DOTS}/scripts/kuro-check; echo; read -p \"Press Enter to close...\"'",
-            ),
+            ("Compact Bar", f"bash {DOTS}/scripts/kuro-bar-compact"),
+            ("Full Bar", f"bash {DOTS}/scripts/kuro-bar-full"),
+            ("Restart Preview", f"bash {DOTS}/scripts/kuro-restart"),
+            ("Edit Colors", f"bash {DOTS}/scripts/kuro-edit-colors"),
+            ("Open Hyprland Rules", f"bash {DOTS}/scripts/kuro-open-hypr-rules"),
+            ("Run Check", f"bash {DOTS}/scripts/kuro-check-terminal"),
             ("Open Folder", f"xdg-open {DOTS}"),
-            (
-                "Edit Waybar CSS",
-                f"kitty --config {DOTS}/.config/kitty/kitty.conf nano {DOTS}/.config/waybar/style.css",
-            ),
-            (
-                "Edit Waybar Config",
-                f"kitty --config {DOTS}/.config/kitty/kitty.conf nano {DOTS}/.config/waybar/config.jsonc",
-            ),
-            (
-                "Edit Rofi Theme",
-                f"kitty --config {DOTS}/.config/kitty/kitty.conf nano {DOTS}/.config/rofi/theme.rasi",
-            ),
-            (
-                "Edit Kitty Theme",
-                f"kitty --config {DOTS}/.config/kitty/kitty.conf nano {DOTS}/.config/kitty/kitty.conf",
-            ),
-            (
-                "Edit SwayNC CSS",
-                f"kitty --config {DOTS}/.config/kitty/kitty.conf nano {DOTS}/.config/swaync/style.css",
-            ),
-            (
-                "Edit Hyprland",
-                f"kitty --config {DOTS}/.config/kitty/kitty.conf nano {DOTS}/.config/hypr/hyprland.conf",
-            ),
-            (
-                "Open Rofi",
-                f"rofi -show drun -config {DOTS}/.config/rofi/config.rasi",
-            ),
+            ("Open Rofi", f"rofi -show drun -config {DOTS}/.config/rofi/config.rasi"),
             ("Notifications", "swaync-client -t"),
+            ("Edit Waybar CSS", f"kitty --config {DOTS}/.config/kitty/kitty.conf nano {DOTS}/.config/waybar/style.css"),
+            ("Edit Waybar Config", f"kitty --config {DOTS}/.config/kitty/kitty.conf nano {DOTS}/.config/waybar/config.jsonc"),
+            ("Edit Rofi Theme", f"kitty --config {DOTS}/.config/kitty/kitty.conf nano {DOTS}/.config/rofi/theme.rasi"),
+            ("Edit Kitty Theme", f"kitty --config {DOTS}/.config/kitty/kitty.conf nano {DOTS}/.config/kitty/kitty.conf"),
+            ("Edit SwayNC CSS", f"kitty --config {DOTS}/.config/kitty/kitty.conf nano {DOTS}/.config/swaync/style.css"),
         ]
-
         for i, (name, command) in enumerate(buttons):
             grid.addWidget(self.action_button(name, command), i // 2, i % 2)
 

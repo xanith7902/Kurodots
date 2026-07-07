@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -e
+DOTS="$HOME/Projects/kurodots"
+LINE=$(grep -n "Window Rules" "$DOTS/.config/hypr/hyprland.conf" | head -n 1 | cut -d: -f1)
+[ -z "$LINE" ] && LINE=1
+kitty --config "$DOTS/.config/kitty/kitty.conf" nano +"$LINE" "$DOTS/.config/hypr/hyprland.conf"
