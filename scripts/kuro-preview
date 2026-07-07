@@ -10,6 +10,8 @@ pkill -9 swaync-client 2>/dev/null
 
 sleep 0.5
 
+"$DOTS/scripts/kuro-eq-start" >/tmp/kuro-easyeffects-start.log 2>&1 &
+
 waybar \
   -c "$DOTS/.config/waybar/config.jsonc" \
   -s "$DOTS/.config/waybar/style.css" \

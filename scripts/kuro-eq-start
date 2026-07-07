@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+
+if pgrep -x easyeffects >/dev/null; then
+  exit 0
+fi
+
+easyeffects --gapplication-service >/tmp/kuro-easyeffects.log 2>&1 &
+sleep 0.8

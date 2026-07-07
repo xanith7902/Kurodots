@@ -222,8 +222,10 @@ class KuroAudio(QWidget):
         eq_title = QLabel("Equalizer")
         eq_title.setObjectName("EqTitle")
 
-        self.saved = QLabel("Saved")
+        self.saved = QPushButton("EasyEffects")
         self.saved.setObjectName("SavedBadge")
+        self.saved.setCursor(Qt.CursorShape.PointingHandCursor)
+        self.saved.clicked.connect(lambda: spawn(f"bash {DOTS}/scripts/kuro-eq-open"))
 
         self.current_preset = QLabel("Flat")
         self.current_preset.setObjectName("PresetLabel")
@@ -317,6 +319,10 @@ class KuroAudio(QWidget):
 
         self.current_preset.setText(name)
         self.save_eq(name, values)
+
+        # Real system-wide EQ via EasyEffects.
+        # Make matching EasyEffects output presets named Flat/Bass/Treble/etc.
+        spawn(f"bash {DOTS}/scripts/kuro-eq-load {name}")
 
     def save_custom(self):
         values = [s.value() for s in self.sliders]

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -e
+
+PRESET="$1"
+
+if [ -z "$PRESET" ]; then
+  notify-send "Kuro Audio" "No EasyEffects preset name given"
+  exit 1
+fi
+
+PRESET_FILE="$HOME/.config/easyeffects/output/$PRESET.json"
+
+"$HOME/Projects/kurodots/scripts/kuro-eq-start"
+
+if [ ! -f "$PRESET_FILE" ]; then
+  notify-send "Kuro Audio" "Preset not found: $PRESET. Create it in EasyEffects first."
+  easyeffects >/tmp/kuro-easyeffects-gui.log 2>&1 &
+  exit 1
+fi
+
+easyeffects --load-preset "$PRESET" >/tmp/kuro-eq-load.log 2>&1 &
+printf "%s\n" "$PRESET" > "$HOME/Projects/kurodots/themes/kuro/current-eq.txt"
+notify-send "Kuro Audio" "EasyEffects preset loaded: $PRESET"
