@@ -15,4 +15,4 @@ A custom CachyOS Hyprland rice inspired by clean glassy anime/minimal setups.
 
 ## Status
 
-Development only. Not linked to the live system yet.
+In development, reletivley functional.
